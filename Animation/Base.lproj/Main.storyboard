@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frame 1.png" translatesAutoresizingMaskIntoConstraints="NO" id="agU-NX-HsG">
+                                <rect key="frame" x="72" y="34" width="174" height="211"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="174" id="XKA-E4-w7p"/>
+                                    <constraint firstAttribute="height" constant="211" id="ged-om-ue7"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Apc-TU-Hmm">
+                                <rect key="frame" x="128" y="362" width="65" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="DmH-tV-nwY"/>
+                                    <constraint firstAttribute="height" constant="30" id="k74-9j-tiy"/>
+                                </constraints>
+                                <state key="normal" title="START">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DmH-tV-nwY"/>
+                                        <exclude reference="k74-9j-tiy"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="move:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="azc-uS-w3o"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="agU-NX-HsG" secondAttribute="centerX" id="ELb-cx-nTD"/>
+                            <constraint firstItem="agU-NX-HsG" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="14" id="P1l-dO-S7b"/>
+                            <constraint firstAttribute="centerX" secondItem="Apc-TU-Hmm" secondAttribute="centerX" id="SXC-pW-QqO"/>
+                            <constraint firstItem="Apc-TU-Hmm" firstAttribute="top" secondItem="agU-NX-HsG" secondAttribute="bottom" constant="119" id="UVg-gM-lqH"/>
+                            <constraint firstItem="agU-NX-HsG" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="56" id="Wdn-aB-Dng"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="agU-NX-HsG" secondAttribute="trailing" constant="58" id="bDc-dH-NUw"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="image" destination="agU-NX-HsG" id="U6G-nO-74u"/>
+                        <outlet property="moveButton" destination="Apc-TU-Hmm" id="RXj-wt-L4Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="346" y="228"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Frame 1.png" width="84" height="112"/>
+    </resources>
+</document>
